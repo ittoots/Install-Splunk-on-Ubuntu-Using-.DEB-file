@@ -1,0 +1,21 @@
+
+#Command to install Splunk
+dpkg -i splunk_package_name.deb
+
+#Start Splunk and accept license
+/opt/splunk/bin/splunk start --accept-license
+
+#Stop Splunk
+/opt/splunk/bin/splunk stop
+
+#Command to enable Splunk at boot and to run as splunk user (non-root)
+/splunk enable boot-start -user splunk
+
+#Change the owner of splunk directory and sub files/folders to splunk.
+chown -R splunk:splunk /opt/splunk
+
+#Start Splunk
+/opt/splunk/bin/splunk start
+
+
+
