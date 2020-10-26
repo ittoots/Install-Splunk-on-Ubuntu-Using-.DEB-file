@@ -1,3 +1,7 @@
+##Install Splunk on Ubuntu Linux using DEB file
+
+#Switch to root user
+sudo su -
 
 #Command to install Splunk
 dpkg -i splunk_package_name.deb
