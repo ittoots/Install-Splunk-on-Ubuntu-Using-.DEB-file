@@ -21,5 +21,8 @@ chown -R splunk:splunk /opt/splunk
 #Start Splunk
 /opt/splunk/bin/splunk start
 
+#Open web browser and put the below link in the address bar to access the Splunk WebUI
+http://127.0.0.1:8000
+
 
 
