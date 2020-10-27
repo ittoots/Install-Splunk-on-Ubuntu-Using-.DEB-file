@@ -3,6 +3,12 @@
 #Switch to root user
 sudo su -
 
+#Install wget
+apt install wget
+
+#Wget command to download Splunk
+wget -O splunk-8.1.0-f57c09e87251-linux-2.6-amd64.deb 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.1.0&product=splunk&filename=splunk-8.1.0-f57c09e87251-linux-2.6-amd64.deb&wget=true'
+
 #Command to install Splunk
 dpkg -i splunk_package_name.deb
 
@@ -13,7 +19,7 @@ dpkg -i splunk_package_name.deb
 /opt/splunk/bin/splunk stop
 
 #Command to enable Splunk at boot and to run as splunk user (non-root)
-/splunk enable boot-start -user splunk
+/opt/splunk/bin/splunk enable boot-start -user splunk
 
 #Change the owner of splunk directory and sub files/folders to splunk.
 chown -R splunk:splunk /opt/splunk
